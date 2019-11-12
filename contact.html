@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contuct</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+   
+    <link rel="stylesheet" type="text/css" href="contact.css">
+   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+    
+</head>
+
+<body>
+
+<h2>Responsive Contact Section</h2>
+<p>Resize the browser window to see the effect.</p>
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <!-- <img src="image/1.1.jpg" style="width:100%"> -->
+      <div id="mapid"></div>
+    </div>
+  <div class="column">
+
+<!--<form method="POST" action="https://formspree.io/xyygkdvq">
+  <input type="email" name="email" placeholder="Your email">
+  <textarea name="message" placeholder="Test Message"></textarea>
+  <button type="submit">Send Test</button>
+</form> -->
+     <form method="POST" action="https://formspree.io/xyygkdvq">
+       <label for="fname">First Name</label>
+       <input type="text" id="fname" name="firstname" placeholder="Your name..">
+       <label for="lname">Last Name</label>
+       <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+       <!--<label for="country">Country</label>
+       <select id="country" name="country">
+         <option value="australia">Australia</option>
+         <option value="canada">Canada</option>
+         <option value="usa">USA</option>
+       </select> -->
+       <label for="femail">Your Email</label>
+       <input type="email" id="femail" name="Email" placeholder="Your email..">
+
+       <label for="subject">Subject</label>
+       <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+       <input type="submit" value="Submit">
+     </form> 
+
+<bdo dir="rtl">My name is Armimne</bdo>
+
+<script type="text/javascript">
+  var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  maxZoom: 18,
+  id: 'mapbox.streets',
+  accessToken: 'pk.eyJ1IjoiYXJtaW5lZyIsImEiOiJjazI2ZDFzMGQxb25xM2NucnlwZDdvZm8xIn0.l-mLOmoFNZk6yg41Sreb-A'
+}).addTo(mymap);
+
+</script>
+</div>
+</html>
